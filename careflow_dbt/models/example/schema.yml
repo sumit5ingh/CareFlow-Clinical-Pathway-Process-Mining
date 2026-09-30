@@ -1,0 +1,43 @@
+version: 2
+
+models:
+
+  - name: stg_ehr_event_log
+    description: "Cleaned and standardized EHR event log."
+
+    columns:
+
+      - name: case_id
+        description: "Unique identifier for the patient journey."
+        data_tests:
+          - not_null
+
+      - name: activity_name
+        description: "Hospital activity performed during the patient journey."
+        data_tests:
+          - not_null
+
+      - name: event_timestamp
+        description: "Timestamp of the hospital activity."
+        data_tests:
+          - not_null
+
+  - name: event_log
+    description: "Normalized event log prepared for process mining."
+
+    columns:
+
+      - name: case_id
+        description: "Unique identifier for the patient journey."
+        data_tests:
+          - not_null
+
+      - name: activity_name
+        description: "Hospital activity in the patient journey."
+        data_tests:
+          - not_null
+
+      - name: event_timestamp
+        description: "Timestamp of the activity."
+        data_tests:
+          - not_null

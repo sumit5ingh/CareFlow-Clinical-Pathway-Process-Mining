@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: careflow_raw
+    database: aerial-episode-509608-t7
+    schema: careflow_raw
+    description: "Raw EHR event logs loaded into BigQuery during Week 1."
+
+    tables:
+      - name: ehr_event_log_raw
+        description: "Raw timestamped hospital event log generated for CareFlow."
