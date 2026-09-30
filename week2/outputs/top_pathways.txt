@@ -1,0 +1,5 @@
+TOP 10 PATIENT PATHWAYS
+============================================================
+
+1. 1295 cases : Registration -> Triage -> X-Ray -> Doctor Consultation -> Discharge
+2. 705 cases : Registration -> Triage -> X-Ray -> Triage -> X-Ray -> Doctor Consultation -> Discharge

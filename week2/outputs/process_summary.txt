@@ -1,0 +1,19 @@
+CAREFLOW PROCESS MINING SUMMARY
+============================================================
+
+Number of cases: 2000
+Number of events: 11410
+Unique activities: 5
+
+Activities:
+- Discharge
+- Doctor Consultation
+- Registration
+- Triage
+- X-Ray
+
+Start activities:
+- Registration: 2000
+
+End activities:
+- Discharge: 2000
