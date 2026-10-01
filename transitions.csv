@@ -1,0 +1,6 @@
+From,To,Count
+Triage,X-Ray,2705
+Doctor Consultation,Discharge,2000
+Registration,Triage,2000
+X-Ray,Doctor Consultation,2000
+X-Ray,Triage,705
