@@ -1,0 +1,3 @@
+Rank,Variant,Steps,Case_Count,Pct_of_Total,Cumulative_Pct
+1,Registration -> Triage -> X-Ray -> Doctor Consultation -> Discharge,5,1295,64.75,64.75
+2,Registration -> Triage -> X-Ray -> Triage -> X-Ray -> Doctor Consultation -> Discharge,7,705,35.25,100.0
