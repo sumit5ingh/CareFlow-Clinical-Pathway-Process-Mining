@@ -1,0 +1,6 @@
+transition,number_of_cases,average_wait_minutes,median_wait_minutes,maximum_wait_minutes,minimum_wait_minutes
+Doctor Consultation -> Discharge,2000,41.912,42.0,70.0,15.0
+X-Ray -> Triage,705,40.49219858156028,42.0,65.0,15.0
+X-Ray -> Doctor Consultation,2000,39.8975,40.0,65.0,15.0
+Triage -> X-Ray,2705,34.862846580406654,35.0,60.0,10.0
+Registration -> Triage,2000,28.5135,28.0,50.0,7.0

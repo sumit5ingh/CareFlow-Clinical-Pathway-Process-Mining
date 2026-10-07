@@ -1,0 +1,5 @@
+current_activity,number_of_transitions,average_incoming_wait_minutes,median_incoming_wait_minutes,maximum_incoming_wait_minutes
+Discharge,2000,41.912,42.0,70.0
+Doctor Consultation,2000,39.8975,40.0,65.0
+X-Ray,2705,34.862846580406654,35.0,60.0
+Triage,2705,31.635489833641405,32.0,65.0
