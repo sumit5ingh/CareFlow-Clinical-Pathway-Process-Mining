@@ -25,8 +25,9 @@ Run: `python transition_analysis.py`
 | findings_summary.md | top 3 paths, rare paths, unexpected transitions |
 
 ## Handoff notes (Member 2 / Member 3)
-- **Member 2:** `transitions.csv` has `Avg_Gap_Min` per transition - use it as the starting point for bottleneck / time-gap analysis. Zero-gap transitions are flagged in `findings_summary.md`; treat them as possible logging issues.
+-  **Member 2:** `transitions.csv` has `Avg_Gap_Min` per transition - use it as the starting point for bottleneck / time-gap analysis. Zero-gap transitions would be flagged in `findings_summary.md` (none found in this run).
 - **Member 3:** use `top_variants.csv` and `dfg_graph.png` for visuals / dashboard. `rare_paths.csv` entries need clinician validation before being called errors.
 - Rare threshold and TOP_N can be changed at the top of the script (`RARE_THRESHOLD`, `TOP_N`).
-- Rework loops (e.g. X-Ray -> Triage) are valid by simulation design; consecutive duplicates and reversed order are likely data errors.
+- Rework loops (e.g. X-Ray -> Triage) are valid by simulation design; consecutive duplicates and reversed order would indicate data errors (none found in this run).
 - Requires: `pandas`; `pm4py` + Graphviz only for `dfg_graph.png` (skipped if missing).
+- Final check (Day 7): fresh run reproduced all outputs (11,410 events, 2,000 cases, 5 unique transitions, 2 variants). No consecutive duplicates, zero-gap, reversed or rare paths found in this run.
