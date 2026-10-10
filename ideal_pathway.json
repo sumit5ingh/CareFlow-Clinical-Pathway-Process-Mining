@@ -1,0 +1,188 @@
+{
+  "stages": [
+    "Registration",
+    "Triage",
+    "Tests",
+    "Consultation",
+    "Treatment",
+    "Discharge"
+  ],
+  "required": [
+    "Registration",
+    "Triage",
+    "Consultation",
+    "Discharge"
+  ],
+  "optional": [
+    "Tests",
+    "Treatment"
+  ],
+  "first_step": "Registration",
+  "last_step": "Discharge",
+  "allowed_transitions": {
+    "Registration": [
+      "Triage",
+      "Consultation"
+    ],
+    "Triage": [
+      "Tests",
+      "Consultation"
+    ],
+    "Tests": [
+      "Tests",
+      "Consultation"
+    ],
+    "Consultation": [
+      "Consultation",
+      "Treatment",
+      "Discharge"
+    ],
+    "Treatment": [
+      "Discharge"
+    ],
+    "Discharge": []
+  },
+  "forbidden_transitions": [
+    [
+      "Registration",
+      "Registration"
+    ],
+    [
+      "Registration",
+      "Tests"
+    ],
+    [
+      "Registration",
+      "Treatment"
+    ],
+    [
+      "Registration",
+      "Discharge"
+    ],
+    [
+      "Triage",
+      "Registration"
+    ],
+    [
+      "Triage",
+      "Triage"
+    ],
+    [
+      "Triage",
+      "Treatment"
+    ],
+    [
+      "Triage",
+      "Discharge"
+    ],
+    [
+      "Tests",
+      "Registration"
+    ],
+    [
+      "Tests",
+      "Triage"
+    ],
+    [
+      "Tests",
+      "Treatment"
+    ],
+    [
+      "Tests",
+      "Discharge"
+    ],
+    [
+      "Consultation",
+      "Registration"
+    ],
+    [
+      "Consultation",
+      "Triage"
+    ],
+    [
+      "Consultation",
+      "Tests"
+    ],
+    [
+      "Treatment",
+      "Registration"
+    ],
+    [
+      "Treatment",
+      "Triage"
+    ],
+    [
+      "Treatment",
+      "Tests"
+    ],
+    [
+      "Treatment",
+      "Consultation"
+    ],
+    [
+      "Treatment",
+      "Treatment"
+    ],
+    [
+      "Discharge",
+      "Registration"
+    ],
+    [
+      "Discharge",
+      "Triage"
+    ],
+    [
+      "Discharge",
+      "Tests"
+    ],
+    [
+      "Discharge",
+      "Consultation"
+    ],
+    [
+      "Discharge",
+      "Treatment"
+    ],
+    [
+      "Discharge",
+      "Discharge"
+    ]
+  ],
+  "activity_to_stage": {
+    "Discharge": "Discharge",
+    "Doctor Consultation": "Consultation",
+    "Registration": "Registration",
+    "Triage": "Triage",
+    "X-Ray": "Tests"
+  },
+  "exceptions": [
+    {
+      "situation": "Emergency patient Triage skip kare (Registration -> Consultation)",
+      "type": "Clinical"
+    },
+    {
+      "situation": "Repeat tests",
+      "type": "Clinical"
+    },
+    {
+      "situation": "Multiple consultations",
+      "type": "Clinical"
+    },
+    {
+      "situation": "X-Ray ke baad dobara Triage, phir X-Ray (rework loop)",
+      "type": "Clinical rework"
+    },
+    {
+      "situation": "Discharge ke baad koi activity",
+      "type": "Data error"
+    },
+    {
+      "situation": "Registration pehla step nahi",
+      "type": "Data error"
+    },
+    {
+      "situation": "Same timestamp ya reversed order",
+      "type": "Data error"
+    }
+  ]
+}
