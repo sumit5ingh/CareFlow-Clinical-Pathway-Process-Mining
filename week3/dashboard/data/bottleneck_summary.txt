@@ -1,0 +1,14 @@
+CAREFLOW WEEK 3 - BOTTLENECK ANALYSIS
+==================================================
+
+Valid events analyzed: 11410
+Cases analyzed: 2000
+Transitions analyzed: 9410
+
+TOP 5 TRANSITIONS BY AVERAGE WAITING TIME
+--------------------------------------------------
+Doctor Consultation -> Discharge | Average: 41.91 minutes | Median: 42.00 minutes | Observations: 2000
+X-Ray -> Triage | Average: 40.49 minutes | Median: 42.00 minutes | Observations: 705
+X-Ray -> Doctor Consultation | Average: 39.90 minutes | Median: 40.00 minutes | Observations: 2000
+Triage -> X-Ray | Average: 34.86 minutes | Median: 35.00 minutes | Observations: 2705
+Registration -> Triage | Average: 28.51 minutes | Median: 28.00 minutes | Observations: 2000

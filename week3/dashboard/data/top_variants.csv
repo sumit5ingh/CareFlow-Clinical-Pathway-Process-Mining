@@ -1,0 +1,3 @@
+Variant,Cases,Percent
+Registration -> Triage -> X-Ray -> Doctor Consultation -> Discharge,1295,64.75
+Registration -> Triage -> X-Ray -> Triage -> X-Ray -> Doctor Consultation -> Discharge,705,35.25
