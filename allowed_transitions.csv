@@ -1,0 +1,26 @@
+from,to,allowed,reason,seen_in_data
+Discharge,Discharge,N,Discharge ke baad koi step nahi ho sakta,0
+Discharge,Doctor Consultation,N,Discharge ke baad koi step nahi ho sakta,0
+Discharge,Registration,N,Discharge ke baad koi step nahi ho sakta,0
+Discharge,Triage,N,Discharge ke baad koi step nahi ho sakta,0
+Discharge,X-Ray,N,Discharge ke baad koi step nahi ho sakta,0
+Doctor Consultation,Discharge,Y,Forward move (optional step skipped),2000
+Doctor Consultation,Doctor Consultation,Y,Repeat allowed (repeat test / multiple consultations),0
+Doctor Consultation,Registration,N,Registration sirf sabse pehla step hai,0
+Doctor Consultation,Triage,N,Backward move: order violation,0
+Doctor Consultation,X-Ray,N,Backward move: order violation,0
+Registration,Discharge,N,"Required step skip ho raha hai: Triage, Consultation",0
+Registration,Doctor Consultation,Y,Exception: emergency patient Triage skip kar sakta hai,0
+Registration,Registration,N,Registration sirf sabse pehla step hai,0
+Registration,Triage,Y,Forward move,2000
+Registration,X-Ray,N,Required step skip ho raha hai: Triage,0
+Triage,Discharge,N,Required step skip ho raha hai: Consultation,0
+Triage,Doctor Consultation,Y,Forward move (optional step skipped),0
+Triage,Registration,N,Registration sirf sabse pehla step hai,0
+Triage,Triage,N,Same step dobara clinically meaningful nahi,0
+Triage,X-Ray,Y,Forward move,2705
+X-Ray,Discharge,N,Required step skip ho raha hai: Consultation,0
+X-Ray,Doctor Consultation,Y,Forward move,2000
+X-Ray,Registration,N,Registration sirf sabse pehla step hai,0
+X-Ray,Triage,N,Rework loop: X-Ray ke baad dobara Triage (ideal path mein nahi),705
+X-Ray,X-Ray,Y,Repeat allowed (repeat test / multiple consultations),0
