@@ -1,0 +1,8 @@
+VALIDATION REPORT
+Events: 11410 | Cases: 2000
+Cases following ideal pathway: 1295 (64.8%)
+Cases with deviations: 705
+Unmatched activities: none
+Forbidden transitions seen in data: 1
+Deviation reasons:
+  - forbidden transition: Tests -> Triage: 705
