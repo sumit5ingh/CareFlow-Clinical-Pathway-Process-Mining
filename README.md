@@ -92,3 +92,26 @@ python careflow_simulator.py
 ```
 
 The random seed is fixed (`SEED = 42`), so you get the identical file every time. To change the size, loop-back probability, wait times or durations, edit the configuration section at the top of `careflow_simulator.py`, and update the numbers in this README to match.
+
+## Project Summary (Weeks 1-4)
+
+**Goal:** Analyse simulated hospital patient journeys with process mining, find rework and bottlenecks, and check conformance to an ideal clinical pathway.
+
+**Data:** 2,000 patient cases, 11,410 events (Case_ID, Activity_Name, Timestamp).
+
+**Pipeline**
+- Week 1: simulate EHR event data and export the event log
+- Week 2: clean and standardize activity names and timestamps, validate the log
+- Week 3: directly-follows graph, transition counts, frequent and rare paths
+- Week 4: define the ideal pathway and validate the log against it
+
+**Ideal pathway:** Registration -> Triage -> X-Ray -> Doctor Consultation -> Discharge
+
+**Key findings**
+- 1,295 of 2,000 cases (64.8%) follow the ideal pathway
+- 705 cases (35.2%) have a rework loop: X-Ray -> Triage -> X-Ray
+- Loop-back visits take about 76 minutes longer on average (about 221 vs 145 minutes from Registration to Discharge)
+
+**Limitation:** The data is simulated, so the rework loop is a designed scenario and not a real hospital result.
+
+**Key files:** `week4_ideal_pathway.py`, `ideal_pathway.json`, `allowed_transitions.csv`, `validation_report.txt`, `README_week3.md`, `README_week4.md`
